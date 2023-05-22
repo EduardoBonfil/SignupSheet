@@ -1,0 +1,246 @@
+/*font-family: 'Parisienne', cursive;
+font-family: 'Vollkorn', serif; */
+
+:root {
+  --black: rgba(0, 0, 0, 0.925);
+  --lighter-black: rgba(0, 0, 0, 0.76);
+
+  color: blanchedalmond;
+  font-family: 'vollkorn', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--black);
+}
+.header-div{
+  display: grid;
+  padding-top:.5rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:1fr;
+  grid-template-areas: 
+  "L m";
+  border-bottom: 3px solid blanchedalmond;
+  box-shadow: 0 0 1rem blanchedalmond;
+}
+.logo{
+  grid-area:L;
+  display: flex;
+  
+  justify-content: center;
+  font-size:3rem;
+  font-family: 'Vollkorn', serif;
+  text-align:center;
+  opacity: .6;
+}
+#camera{
+  font-size: 2.5rem;
+  padding-top:.5rem;
+}
+.logo-text{
+  padding-right: 1rem;
+}
+.logo:hover{
+  opacity:1;
+}
+.menu{
+  grid-area:m;
+  display: flex;
+  font-size:1.5rem;
+  list-style:none;
+  justify-content: space-around;
+  align-items: center;
+  
+ 
+}
+.menu>li{
+  border:2px solid blanchedalmond;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  opacity: .8;
+  
+ 
+  transition-duration: 250ms;
+}
+.menu>li:hover{
+  opacity:1;
+  color: var(--black);
+  background-color: blanchedalmond;
+  
+}
+
+.container {
+  width: 40rem;
+  height: 50rem;
+  display: flex;
+  margin: 7rem auto;
+
+  background-image: url(SuperstitionSunrise.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  box-shadow: 0 0 1rem blanchedalmond;
+
+  animation: background-change 25s infinite ease-in-out;
+  animation-delay: 5s;
+}
+.sheet {
+  width: 100%;
+  margin: auto auto;
+  background-color: var(--lighter-black);
+}
+
+.title {
+  padding-top: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  text-align: center;
+}
+.call2action {
+  padding-top: 2rem;
+
+  text-align: center;
+}
+
+#arrow {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+
+  display: block;
+}
+
+.signup {
+  padding: .5rem;
+  display: flex;
+  margin:3rem 2rem;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 .25rem blanchedalmond;
+  border: 1px solid blanchedalmond;
+  border-radius: 15px;
+}
+#name {
+  margin-right: 1%;
+  background-color: blanchedalmond;
+  box-shadow: 0 0 0.25rem blanchedalmond;
+  opacity: .7;
+  border-radius: 10px;
+}
+#name:hover{
+    opacity: 1;
+}
+#name:focus{
+    opacity: 1;
+}
+.name-label {
+  margin-right: 1%;
+ margin-left: 1%;
+
+}
+#email {
+  margin-right: 1%;
+  box-shadow: 0 0 0.25rem blanchedalmond;
+  background-color: blanchedalmond;
+  opacity: .7;
+  border-radius: 10px;
+}
+#email:hover{
+    opacity: 1;
+}
+#email:focus{
+    opacity: 1;
+}
+.email-label {
+  margin-right: 1%;
+}
+
+.button {
+  background-color: blanchedalmond;
+  border-radius: 10px;
+  font-weight: bold;
+  border: 0.15rem solid white;
+  opacity: .7;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+.button:hover {
+  opacity: 1;
+}
+
+
+@media (max-width: 700px){
+    :root{
+        font-size: 10px;
+    }
+
+    .input{
+        width: 7rem;
+    }
+    .signup{
+     
+      
+    }
+    .container{
+      width: 30rem;
+      height: 37.5rem;
+    }
+    .button{
+      font-size: .75rem;
+    }
+
+}
+@media (min-width:701px){
+  .signup{
+    
+  }
+  
+}
+@media (min-width: 1300px){
+    :root{
+        font-size: 20px;
+    }
+    .button{
+      margin-right: 1rem;
+     
+      width: 10%;
+      position: relative;
+    }
+    .signup{
+      
+    }
+}
+
+@keyframes background-change{
+  0%{
+    background-image: url(SuperstitionSunrise.jpg);
+
+  }
+
+  25%{
+    background-image: url(SuperstitionTwilight.jpg);
+    
+  }
+
+  50%{
+    background-image: url(JoshuaTree.jpg);
+
+  }
+  75%{
+    background-image: url(BellRockSedona.jpg);
+
+  }
+
+
+
+
+
+
+}
